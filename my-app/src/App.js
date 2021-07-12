@@ -6,6 +6,10 @@ import Image from './components/layout/Image'
 import Title from './components/layout/Title';
 
 
+
+
+
+
 class App extends Component {
   
   render(){
@@ -20,6 +24,14 @@ class App extends Component {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
 export default App;
-
-
