@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 
 import Image from './components/layout/Image'
 
-import Title from './components/layout/Title';
+import Content from './components/layout/Content';
+
 
 
 
@@ -15,10 +16,10 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <div className="Product">
-          <Image />
-        </div>
-        <Title />
+        
+        <Image />
+        
+        <Content />
       </div>
     );
   }
