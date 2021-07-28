@@ -1,29 +1,44 @@
 import './App.css';
-import React, { Component } from 'react'
-
-import Image from './components/layout/Image'
-
-import Content from './components/layout/Content';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+import React from 'react'
+
+import {BrowserRouter as Router, Switch, Route ,Link} from 'react-router-dom';
+
+
+import Product from './components/layout/product/Product';
+import  Navbar  from './components/layout/Navbar';
+import Login from './components/pages/Login';
+
+
+import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 
 
+const App= () => {
+  return (
+    <Router>
+      <div className="AppMain">
+        <div>
+          <Navbar title='Rentalz' />
+        <Breadcrumb>
+        <BreadcrumbItem><Link to="/">Home</Link></BreadcrumbItem>
+        <BreadcrumbItem active>Library</BreadcrumbItem>
+      </Breadcrumb>
 
-
-class App extends Component {
-  
-  render(){
-    return (
-      <div className="App">
+      <Switch>
         
-        <Image />
-        
-        <Content />
+        <Route exact path='/' component={Product}/>
+
+        <Route exact path='/login' component={Login}/>  
+      </Switch>
       </div>
-    );
-  }
+      </div>
+    </Router>
+  );
 }
+
 
 
 
